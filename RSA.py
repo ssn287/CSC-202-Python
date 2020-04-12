@@ -38,8 +38,8 @@ def isPrime(n):
   if n == 2 or n == 3: return True #if n is 2 or 3 then true
   if n < 2 or n%2 == 0: return False #if n is 1 or even then false
   if n < 9: return True #if n is less than 10 and the previous conditions are not met then n is prime
-  if n%3 == 0: return False #if n is divisible by 3 then false
-  r = int(n ** 0.5) #take the square root of n
+  if n % 3 == 0: return False #if n is divisible by 3 then false
+  r = (n ** 0.5) % 1 #take the square root of n
   f = 5
   while f <= r: #while f is less than the square root of n
     if n % f == 0: return False #if n is divisible by f then false
